@@ -24,7 +24,14 @@ Once **void linux** is set up, it's time to `xbps-install` and `flatpak` your wa
 * `sudo xbps-install -Su` for a system update
 
 
+## Know what packages you installed
 
+```bash
+xbps-query -m
+
+```
+
+The above command tells you what packages you installed, case you got amnesia.
 
 
 
