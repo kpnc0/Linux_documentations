@@ -9,3 +9,5 @@ sudo xbps-install arc-theme papirus-icon-theme
 ```
 
 Icons: Papirus-Dark
+
+## I need to rice the panel.

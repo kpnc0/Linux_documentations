@@ -1,6 +1,5 @@
 ## Why Install over the internet what has already been installed?
 
-
 In computer A, you installed 1GB worth of packages using `xbps-install`. Great.
 
 But utterly foolish is it, to install the 1GB package in computer B (if it is void linux too) over the internet. Why?

@@ -1,0 +1,87 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><h2>So, I decided to replace windows 8 with void linux.</h2>
+<p>I don’t really know what got to me, but one day, while travelling back home, I got the urge to remove windows and install <strong>void linux</strong> into my laptop.</p>
+<p>On the way, I purchased a 8GB pendrive for a suspiciously cheap price (turns out to be a fake when I tried using it)</p>
+<p>I end up having to perform a tedious process of clearing my USB pendrives of it’s contents and flashing it with a tiny-core iso.</p>
+<h3>Why tiny-core you may <strong>ask</strong>?</h3>
+<ul>
+<li>Because my mind still believe I could easily change the OS of a system, let alone boot into it via USB. I downloaded a 20MB iso just to check if the process wor<strong>worked</strong>.</li>
+</ul>
+<p>Now, I noticed I had an old PC that was presumed “dead” by me. My initial theory was that the HDD was wearing out, or that the CPU fried up.</p>
+<p>I booted into the PC with tinycore, and voila, it booted perfectly.</p>
+<ul>
+<li>My old PC was not dead like I thought.</li>
+<li>I possibly revived a hardware that would’ve been lying dead.</li>
+</ul>
+<p>As I saw tinycore boot perfectly, I decided to escalate, and install the void linux iso.</p>
+<h3>The old PC had problems</h3>
+<p>I could boot successfully into the PC, via USB. However, the boot took waay too long, giving me errors of a drive corruption (sr0 Error, and I didn’t really know what sr0 even mean)</p>
+<p>I used Deepseek for querying and debugging the issues. But that happened later.</p>
+<p>When the PC <strong>finally</strong> booted into void linux, I realized I couldn’t access the harddrive, giving me the error of <strong>Bad superblocks</strong>.</p>
+<ul>
+<li>I hypothesized that my hard drive was <strong>failing</strong>.</li>
+</ul>
+<p>I decided to revisit the PC later.</p>
+<h3>Of the laptop:</h3>
+<p>The USB boot happened without much <strong>problems</strong>, and now, I had to manually set up the partitions here.</p>
+<ul>
+<li>I decided to query Deepseek about this. And let me tell you, it saved quite some time for me.</li>
+<li>One thing I learnt was that I didn’t really have to wipe out my whole HDD, or even C://.</li>
+<li>As a matter of fact, I just had to wipe out windows_recovery partition (~20gb) to <strong>convert to ext4</strong> and make it the root/ of my OS. And a tiny 200MB already allocated space for the bootloader.</li>
+</ul>
+<p><em><strong>Side yap</strong></em>
+The thing was, I had planned to shrink the C:// partition, but I got ntfs error, and for me to recover it using windows diagnostics.
+That I did, and my windows was officially stuck on repairing C:// drive. Following that, I decided to remove the windows boot option altogether by <strong>renaming</strong> the bootloader files, <strong>later</strong>.</p>
+<p>My joy was endless after watching my laptop boot to void linux without an USB.</p>
+<h3>Back to my old PC:</h3>
+<p>Now, here’s my situation:</p>
+<ul>
+<li>
+<p>2GB RAM</p>
+</li>
+<li>
+<p>Old processor</p>
+</li>
+<li>
+<p>500GB HDD</p>
+</li>
+<li>
+<p>Intel graphics card</p>
+</li>
+<li>
+<p>Hard drive presumed <strong>dead</strong></p>
+</li>
+<li>
+<p>USB boot taking way longer than user due to a huge chain of errors (sr0 errors)</p>
+</li>
+</ul>
+<p>And this old beast ran windows 8 (The OS idles at around 1.1GB RAM).</p>
+<p>Firstly, I had to manually try fixing the situation of driver errors. Without mountable drives, I couldn’t possibly <strong>flash</strong> the bootloader to my computer.</p>
+<ul>
+<li>Deepseek queried: sr0 meant optical drives, so I had to disconnect HDD and optical drive to get rid of  the errors.</li>
+<li>I manually disconnected the required. The USB boot happened <strong>instantly</strong>.</li>
+<li>I reconnected the HDD port. And behold: the hard drive mounted successfully in void linux. I could access the files that otherwise would’ve been lost forever.</li>
+<li>Following that, I <strong>converted</strong> the old PC’s C:// drive into root. And totally wiped out windows.</li>
+<li>My PC was finally up and running. This happened on 2026-05-25, a day after flashing my laptop.</li>
+</ul>
+<h2>functionality setup</h2>
+<p>I had:</p>
+<ul>
+<li>A functioning void_linux_musl laptop</li>
+<li>A functioning void_linux_musl PC</li>
+</ul>
+<p>I set them up side by side.</p>
+<p><em><strong>Side yap</strong></em>
+My laptop was old, really old. 6GB ram, celeronR perhaps. It gave me a lot of tech discipline.</p>
+<h3>xbps-install</h3>
+<p>I had used deepseek to suggest me commands, and I would type it, not knowing what it did. But eventually, on repeated use, I figured out what the commands <strong>meant</strong>.</p>
+<p>I had figured out how to use gparted. ntfs-3g for ntfs file system support.</p>
+<p>xbps-install was the first commands I memorized.</p>
+<ul>
+<li>Since the day of setting up, 2026-05-26, I used xbps-install a lot, to set up git, nodejs and the classic developer kits.</li>
+<li>The developer kit installation was quite straightforward, and pretty <strong>lightweight</strong>.</li>
+<li>I figured out how to share packages offline via pendrive. <code>sudo xbps-install -R ./ &lt;package-name&gt;</code>. I documented various processes in my github, so check it out:</li>
+<li>My experience the whole week till today involved trying out torrenting, custom compiling open source <strong>rust</strong> repository to run on musl (theorzr/portablemc). All of it documented in github.</li>
+<li>Learnt that I was on <code>musl</code>, and <code>gilbc</code> was more compatible with most apps for linux. But now, I like the minimalism of musl. My life would involve compiling against musl from source, and mostly <strong>shipping</strong> great code.</li>
+<li>I also got comfortable with <strong>hardware</strong>, also figured out that even a small kick to my PC CPU will cause a <strong>disconnect</strong> of my HDD. So, I would have to disconnect and reconnect the HDD. Apparently, the problem was <strong>not</strong> that my HDD was failing, but it was <strong>certainly</strong> connection issues. Another issue might be RAM getting physically moved.</li>
+</ul>
+</body></html>
