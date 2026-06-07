@@ -1,4 +1,4 @@
-Author: Chris | Date: 2026-06-02
+Author: kpnc | Date: 2026-06-02
 
 This is a surface level analysis of the AI tech boom and the economy, and alternative cheaper ways to access intelligence.
 
