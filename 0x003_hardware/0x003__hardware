@@ -1,0 +1,11 @@
+## Hdd failure gauging
+
+```bash
+sudo smartctl -a /dev/sdX
+```
+
+Usually, you feed the output to an AI to get an inference. But the command does tell you the health of your drive.
+
+My HDDs are failing. In the PC. I don't have much time.
+
+
