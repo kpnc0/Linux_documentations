@@ -1,0 +1,5 @@
+    Root Cause Analysis: The SMART attributes reveal physical damage consistent with a drop event during operation (G-Sense_Error_Rate = 76). The elevated Calibration_Retry_Count (17) indicates head positioning failure, and Raw_Read_Error_Rate (31,280) confirms widespread media damage. The Power_On_Hours value of 0 suggests firmware corruption or a factory reset attempt to hide the damage — a common tactic in refurbished drives.
+
+    Why writes fail: When the drive attempts to write to a pending sector, it must first seek to the track. With calibration failures, the head cannot reliably position, causing write commands to time out and return I/O errors. The drive cannot reallocate sectors it cannot physically write to.
+
+    Recovery approach: Given physical damage, write operations are unreliable. Recovery focuses on read-only extraction using ddrescue to identify readable regions, followed by file carving with foremost. This approach bypasses the damaged filesystem structures.

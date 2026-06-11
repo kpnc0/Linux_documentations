@@ -1,0 +1,11 @@
+A drive was recovered from the archives. A 300GB SATA 2.6 drive. 3Gb/s.
+
+Well, It mounted well, however, due to many bad blocks, I get an I/O error and unable to read superblocks errors.
+
+I managed to discard the old partition, and create a 100MB partition from byte 0.
+
+It mounted properly..
+
+Now, I formatted the remaining 250 GB of wild space into ext 4. (The landlocked space between 100MB ext4 and the 50 GB ntfs partition). And well, burn us a village, the partition mounted successfully.
+
+Now, I just have to fstab the thing, and we are good to go. Maybe a chown.
