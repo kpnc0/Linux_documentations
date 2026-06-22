@@ -1,0 +1,60 @@
+[1mdiff --git a/sdb_diagnostics.txt b/part_2.txt[m
+[1mindex 0eeb296..a495b0d 100644[m
+[1m--- a/sdb_diagnostics.txt[m
+[1m+++ b/part_2.txt[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-smartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.18.33_1] (local build)[m
+[32m+[m[32msmartctl 7.5 2025-04-30 r5714 [x86_64-linux-6.18.35_1] (local build)[m
+ Copyright (C) 2002-25, Bruce Allen, Christian Franke, www.smartmontools.org[m
+ [m
+ === START OF INFORMATION SECTION ===[m
+[36m@@ -13,7 +13,7 @@[m [mRotation Rate:    7200 rpm[m
+ Device is:        In smartctl database 7.5/5706[m
+ ATA Version is:   ATA8-ACS T13/1699-D revision 4[m
+ SATA Version is:  SATA 3.0, 6.0 Gb/s (current: 3.0 Gb/s)[m
+[31m-Local Time is:    Thu Jun 11 10:06:53 2026 IST[m
+[32m+[m[32mLocal Time is:    Fri Jun 12 14:47:38 2026 IST[m
+ SMART support is: Available - device has SMART capability.[m
+ SMART support is: Enabled[m
+ [m
+[36m@@ -57,28 +57,28 @@[m [mSCT capabilities: 	       (0x303f)	SCT Status supported.[m
+ SMART Attributes Data Structure revision number: 10[m
+ Vendor Specific SMART Attributes with Thresholds:[m
+ ID# ATTRIBUTE_NAME          FLAG     VALUE WORST THRESH TYPE      UPDATED  WHEN_FAILED RAW_VALUE[m
+[31m-  1 Raw_Read_Error_Rate     0x000f   112   083   006    Pre-fail  Always       -       49649496[m
+[32m+[m[32m  1 Raw_Read_Error_Rate     0x000f   111   083   006    Pre-fail  Always       -       132331952[m
+   3 Spin_Up_Time            0x0003   100   100   000    Pre-fail  Always       -       0[m
+[31m-  4 Start_Stop_Count        0x0032   089   089   020    Old_age   Always       -       11839[m
+[32m+[m[32m  4 Start_Stop_Count        0x0032   089   089   020    Old_age   Always       -       11906[m
+   5 Reallocated_Sector_Ct   0x0033   100   100   036    Pre-fail  Always       -       0[m
+[31m-  7 Seek_Error_Rate         0x000f   088   060   030    Pre-fail  Always       -       715030327[m
+[31m-  9 Power_On_Hours          0x0032   086   086   000    Old_age   Always       -       12641[m
+[32m+[m[32m  7 Seek_Error_Rate         0x000f   088   060   030    Pre-fail  Always       -       715113116[m
+[32m+[m[32m  9 Power_On_Hours          0x0032   086   086   000    Old_age   Always       -       12647[m
+  10 Spin_Retry_Count        0x0013   100   100   097    Pre-fail  Always       -       0[m
+[31m- 12 Power_Cycle_Count       0x0032   092   092   020    Old_age   Always       -       9154[m
+[32m+[m[32m 12 Power_Cycle_Count       0x0032   092   092   020    Old_age   Always       -       9167[m
+ 183 Runtime_Bad_Block       0x0032   099   099   000    Old_age   Always       -       1[m
+ 184 End-to-End_Error        0x0032   100   100   099    Old_age   Always       -       0[m
+[31m-187 Reported_Uncorrect      0x0032   001   001   000    Old_age   Always       -       3951[m
+[32m+[m[32m187 Reported_Uncorrect      0x0032   001   001   000    Old_age   Always       -       3955[m
+ 188 Command_Timeout         0x0032   100   098   000    Old_age   Always       -       12 13 80[m
+ 189 High_Fly_Writes         0x003a   100   100   000    Old_age   Always       -       0[m
+[31m-190 Airflow_Temperature_Cel 0x0022   062   046   045    Old_age   Always       -       38 (Min/Max 36/38)[m
+[31m-194 Temperature_Celsius     0x0022   038   054   000    Old_age   Always       -       38 (0 20 0 0 0)[m
+[31m-195 Hardware_ECC_Recovered  0x001a   047   036   000    Old_age   Always       -       49649496[m
+[32m+[m[32m190 Airflow_Temperature_Cel 0x0022   057   046   045    Old_age   Always       -       43 (Min/Max 41/43)[m
+[32m+[m[32m194 Temperature_Celsius     0x0022   043   054   000    Old_age   Always       -       43 (0 20 0 0 0)[m
+[32m+[m[32m195 Hardware_ECC_Recovered  0x001a   048   036   000    Old_age   Always       -       132331952[m
+ 197 Current_Pending_Sector  0x0012   100   100   000    Old_age   Always       -       0[m
+ 198 Offline_Uncorrectable   0x0010   100   100   000    Old_age   Offline      -       0[m
+ 199 UDMA_CRC_Error_Count    0x003e   200   200   000    Old_age   Always       -       0[m
+[31m-240 Head_Flying_Hours       0x0000   100   253   000    Old_age   Offline      -       12610h+50m+48.692s[m
+[31m-241 Total_LBAs_Written      0x0000   100   253   000    Old_age   Offline      -       1798519898[m
+[31m-242 Total_LBAs_Read         0x0000   100   253   000    Old_age   Offline      -       3461976697[m
+[32m+[m[32m240 Head_Flying_Hours       0x0000   100   253   000    Old_age   Offline      -       12616h+33m+35.838s[m
+[32m+[m[32m241 Total_LBAs_Written      0x0000   100   253   000    Old_age   Offline      -       1805297636[m
+[32m+[m[32m242 Total_LBAs_Read         0x0000   100   253   000    Old_age   Offline      -       3476435327[m
+ [m
+ SMART Error Log Version: 1[m
+ ATA Error Count: 3922 (device log contains only the most recent five errors)[m
